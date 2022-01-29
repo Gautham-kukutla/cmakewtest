@@ -10,7 +10,7 @@ pipeline {
 		   }  }
 	  stage('Cppcheck'){
 		  steps{
-			  cppcheck --enable=all --inconclusive --xml --xml-version=2 . 2> cppcheck.xml
-			  publishCppcheck allowNoReport: true, pattern: 'cppcheck-result.xml'
+			  bat "cppcheck --enable=all --inconclusive --xml --xml-version=2 . 2> cppcheck.xml"
+			  publishCppcheck allowNoReport: true, pattern: '*//cppcheck-result.xml'
 		  }}
   }}

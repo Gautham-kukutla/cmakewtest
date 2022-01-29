@@ -6,6 +6,7 @@ pipeline {
 		  steps{
 	    
 	cmakeBuild buildDir: 'build', installation: 'InSearchPath', steps: [[withCmake: true]]
+	 junit 'testreport.xml'
 		   }  }
 	  stage('Cppcheck'){
 		  steps{

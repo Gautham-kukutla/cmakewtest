@@ -12,5 +12,4 @@ pipeline {
 		  steps{
 			  publishCppcheck allowNoReport: true, pattern: 'cppcheck-result.xml'
 		  }}
-
-
+  }}

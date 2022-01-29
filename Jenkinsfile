@@ -2,7 +2,7 @@ pipeline {
 	agent any
 
   stages {
-	  stage('Building andn gtesting'){
+	  stage('Building and gtesting'){
 		  steps{
 	    
 	cmakeBuild buildDir: 'build', installation: 'InSearchPath', steps: [[withCmake: true]]
